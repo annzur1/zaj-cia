@@ -1,7 +1,7 @@
 class Telewizor:
     kanaly = ["TVP1","TVP2","Polsat","TVN","MTV"]
     nr_kanal = 0
-    glosnosc = 0
+    glosnosc = 10
     def __init__(self):
         print("Ustawiony kanał:", self.kanaly[self.nr_kanal])
     def ustaw_kanal(self, wpisany_kanal):
@@ -11,7 +11,7 @@ class Telewizor:
     def zmien_glosnosc(self, podana_glosnosc):
         self.glosnosc = podana_glosnosc
     def nowa_glosnosc(self):
-        if podana_glosnosc>=0 and podana_glosnosc<=20:
+        if podana_glosnosc>=10 and podana_glosnosc<=20:
             print("Obecna głośność:", self.glosnosc)
         else:
             print("Podana głośność poza skalą.")
@@ -20,7 +20,7 @@ print("Jaki kanał włączyć?")
 nowy_kanal=int(input())
 moj_TV.ustaw_kanal(nowy_kanal)
 moj_TV.wyswietl_kanal()
-print("Jaką głośność ustawić?(od 0 do 20)")
+print("Jaką głośność ustawić?(od 10 do 20)")
 podana_glosnosc=int(input())
 moj_TV.zmien_glosnosc(podana_glosnosc)
 moj_TV.nowa_glosnosc()
